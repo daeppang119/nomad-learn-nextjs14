@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navgation() {
-  const [count, setCount] = useState<number>(0);
   const path = usePathname();
 
   return (
@@ -18,15 +17,6 @@ export default function Navgation() {
         <li>
           <Link href="/about-us">About Us</Link>
           {path === "/about-us" ? "🔥" : ""}
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            {count}
-          </button>
         </li>
       </ul>
     </nav>
