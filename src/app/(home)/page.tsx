@@ -25,7 +25,7 @@ type Movie = {
 };
 
 async function getMovies(): Promise<Movie[]> {
-  await new Promise(resolve => setTimeout(resolve, 5000));
+  // await new Promise(resolve => setTimeout(resolve, 5000));
 
   try {
     const response = await fetch(API_URL);
